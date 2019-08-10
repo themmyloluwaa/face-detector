@@ -1,0 +1,60 @@
+.bounding-box {
+  position: absolute;
+  box-shadow: 0 0 0 3px rgb(241, 91, 55) inset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(0%, 0%);
+  animation: animate 2s linear infinite;
+}
+
+.bounding-box::before {
+  /* position: absolute; */
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  content: "";
+  animation: animatebfr 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    height: 0;
+    box-shadow: 0 0 0 3px rgb(55, 241, 117) inset;
+  }
+  25% {
+    height: 0;
+    box-shadow: 0 0 0 3px rgb(126, 55, 241) inset;
+  }
+  50% {
+    height: 50%;
+    box-shadow: 0 0 0 3px rgb(241, 238, 55) inset;
+  }
+  75% {
+    height: 50%;
+    box-shadow: 0 0 0 3px rgb(241, 55, 201) inset;
+  }
+  100% {
+    height: 0;
+    box-shadow: 0 0 0 3px rgb(55, 213, 241) inset;
+  }
+}
