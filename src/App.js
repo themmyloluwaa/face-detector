@@ -84,7 +84,7 @@ class App extends Component {
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     // fetch api call from backend and pass data into the displaybox method
-    fetch("http://localhost:3000/imageUrl", {
+    fetch("https://server-fd.herokuapp.com/imageUrl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -99,7 +99,7 @@ class App extends Component {
       .catch(err => console.log(err));
 
     // fetch user entries and increament upon image submission
-    fetch("http://localhost:3000/image", {
+    fetch("https://server-fd.herokuapp.com/image", {
       method: "put",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
